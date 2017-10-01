@@ -1,5 +1,4 @@
 <html>
-
 {% for post in posts %}
 <h1>{{ post.titulo }} </h1>
 <h4>{{ post.resumo }}</h4>
@@ -8,7 +7,6 @@
     {{ post.texto|safe }}
 
 </div>
-
-{% endfor %}
+<a href="{{ post.get_absolute_url }}" class="btn btn-success" role="button">Detalhes</a> {% endfor %} oi
 
 </html>

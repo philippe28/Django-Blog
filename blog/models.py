@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.core.urlresolvers import reverse
 
 from ckeditor.fields import RichTextField
 
@@ -20,4 +21,7 @@ class Publicacao(models.Model):
         self.save()
 
     def get_absolute_url(self):
-        return reverse('catalog:publicacao', kwargs={'slug': self.slug})
+        return reverse('post_detalhe', kwargs={'slug': self.slug})
+
+    def __unicode(self):
+        return self.title

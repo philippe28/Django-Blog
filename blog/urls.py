@@ -4,5 +4,5 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.post_lista, name='post_lista'),
-    url(r'^post/(?P<slug>[\w_-]+)/$', views.post, name='post'),
+    url(r'^post/(?P<slug>[\w_-]+)/$', views.post, name='post_detalhe'),
 ]

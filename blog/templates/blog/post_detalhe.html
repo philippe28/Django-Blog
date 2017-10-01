@@ -1,14 +1,7 @@
 <html>
+{{post.titulo}}
 
-{% for post in posts %}
-<h1>{{ post.titulo }} </h1>
-<h4>{{ post.resumo }}</h4>
-<h5>{{ post.data_publicacao }} </h5>
-<div>
-    {{ post.texto|safe }}
 
-</div>
 
-{% endfor %}
 
 </html>
