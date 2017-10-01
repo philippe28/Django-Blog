@@ -14,6 +14,30 @@ import os
 import dj_database_url
 
 
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+
+
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+ALLOWED_HOSTS = ['*']
+
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+
+STATIC_URL = '/static/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
@@ -117,30 +141,6 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
-
-
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-
-
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
-
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-ALLOWED_HOSTS = ['*']
-
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
-
-STATIC_URL = '/static/'
-
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
 
 
 ####################################
