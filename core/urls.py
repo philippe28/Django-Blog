@@ -13,9 +13,9 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import patterns, include, url
-from django.contrib import admin
 from django.conf import settings
+from django.conf.urls import include, url
+from django.contrib import admin
 
 
 urlpatterns = [
@@ -23,10 +23,3 @@ urlpatterns = [
     url(r'', include('blog.urls')),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 ]
-
-
-if not settings.DEBUG:
-    urlpatterns += patterns('',
-                            (r'^static/(?P<path>.*)$', 'django.views.static.serve',
-                             {'document_root': settings.STATIC_ROOT}),
-                            )
