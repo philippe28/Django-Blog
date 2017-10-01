@@ -5,73 +5,97 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 0001_initial.py	../blog/migrations/0001_initial.py	1;"	kind:file	line:1
-0001_initial.py	../home/migrations/0001_initial.py	1;"	kind:file	line:1
-0002_auto_20171001_0233.py	../home/migrations/0002_auto_20171001_0233.py	1;"	kind:file	line:1
+0002_remove_publicacao_data_cadastro.py	../blog/migrations/0002_remove_publicacao_data_cadastro.py	1;"	kind:file	line:1
+0003_publicacao_resumo.py	../blog/migrations/0003_publicacao_resumo.py	1;"	kind:file	line:1
+0004_auto_20171001_1354.py	../blog/migrations/0004_auto_20171001_1354.py	1;"	kind:file	line:1
+0005_auto_20171001_1322.py	../blog/migrations/0005_auto_20171001_1322.py	1;"	kind:file	line:1
 ALLOWED_HOSTS	../core/settings.py	/^ALLOWED_HOSTS = []$/;"	kind:variable	line:28
-AUTH_PASSWORD_VALIDATORS	../core/settings.py	/^AUTH_PASSWORD_VALIDATORS = [$/;"	kind:variable	line:89
+AUTH_PASSWORD_VALIDATORS	../core/settings.py	/^AUTH_PASSWORD_VALIDATORS = [$/;"	kind:variable	line:90
 BASE_DIR	../core/settings.py	/^BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))$/;"	kind:variable	line:16
 BlogConfig	../blog/apps.py	/^class BlogConfig(AppConfig):$/;"	kind:class	line:4
-DATABASES	../core/settings.py	/^DATABASES = {$/;"	kind:variable	line:78
+CKEDITOR_CONFIGS	../core/settings.py	/^CKEDITOR_CONFIGS = {$/;"	kind:variable	line:136
+CKEDITOR_UPLOAD_PATH	../core/settings.py	/^CKEDITOR_UPLOAD_PATH = "uploads\/"$/;"	kind:variable	line:135
+DATABASES	../core/settings.py	/^DATABASES = {$/;"	kind:variable	line:79
 DEBUG	../core/settings.py	/^DEBUG = True$/;"	kind:variable	line:26
 HomeConfig	../home/apps.py	/^class HomeConfig(AppConfig):$/;"	kind:class	line:4
 INSTALLED_APPS	../core/settings.py	/^INSTALLED_APPS = [$/;"	kind:variable	line:33
-LANGUAGE_CODE	../core/settings.py	/^LANGUAGE_CODE = 'en-us'$/;"	kind:variable	line:108
-MIDDLEWARE	../core/settings.py	/^MIDDLEWARE = [$/;"	kind:variable	line:44
+LANGUAGE_CODE	../core/settings.py	/^LANGUAGE_CODE = 'en-us'$/;"	kind:variable	line:109
+MEDIA_ROOT	../core/settings.py	/^MEDIA_ROOT = os.path.join(BASE_DIR, 'media')$/;"	kind:variable	line:129
+MEDIA_URL	../core/settings.py	/^MEDIA_URL = '\/media\/'$/;"	kind:variable	line:125
+MIDDLEWARE	../core/settings.py	/^MIDDLEWARE = [$/;"	kind:variable	line:45
 Migration	../blog/migrations/0001_initial.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:11
-Migration	../home/migrations/0001_initial.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:11
-Migration	../home/migrations/0002_auto_20171001_0233.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:8
-Publicacao	../blog/models.py	/^class Publicacao(models.Model):$/;"	kind:class	line:7
-ROOT_URLCONF	../core/settings.py	/^ROOT_URLCONF = 'core.urls'$/;"	kind:variable	line:54
-STATIC_URL	../core/settings.py	/^STATIC_URL = '\/static\/'$/;"	kind:variable	line:122
-TEMPLATES	../core/settings.py	/^TEMPLATES = [$/;"	kind:variable	line:56
-TIME_ZONE	../core/settings.py	/^TIME_ZONE = 'UTC'$/;"	kind:variable	line:110
-USE_I18N	../core/settings.py	/^USE_I18N = True$/;"	kind:variable	line:112
-USE_L10N	../core/settings.py	/^USE_L10N = True$/;"	kind:variable	line:114
-USE_TZ	../core/settings.py	/^USE_TZ = True$/;"	kind:variable	line:116
-WSGI_APPLICATION	../core/settings.py	/^WSGI_APPLICATION = 'core.wsgi.application'$/;"	kind:variable	line:72
+Migration	../blog/migrations/0002_remove_publicacao_data_cadastro.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:8
+Migration	../blog/migrations/0003_publicacao_resumo.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:8
+Migration	../blog/migrations/0004_auto_20171001_1354.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:8
+Migration	../blog/migrations/0005_auto_20171001_1322.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:9
+Publicacao	../blog/models.py	/^class Publicacao(models.Model):$/;"	kind:class	line:10
+ROOT_URLCONF	../core/settings.py	/^ROOT_URLCONF = 'core.urls'$/;"	kind:variable	line:55
+STATIC_ROOT	../core/settings.py	/^STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')$/;"	kind:variable	line:127
+STATIC_URL	../core/settings.py	/^STATIC_URL = '\/static\/'$/;"	kind:variable	line:123
+TEMPLATES	../core/settings.py	/^TEMPLATES = [$/;"	kind:variable	line:57
+TIME_ZONE	../core/settings.py	/^TIME_ZONE = 'America\/Sao_Paulo'$/;"	kind:variable	line:111
+USE_I18N	../core/settings.py	/^USE_I18N = True$/;"	kind:variable	line:113
+USE_L10N	../core/settings.py	/^USE_L10N = True$/;"	kind:variable	line:115
+USE_TZ	../core/settings.py	/^USE_TZ = True$/;"	kind:variable	line:117
+WSGI_APPLICATION	../core/settings.py	/^WSGI_APPLICATION = 'core.wsgi.application'$/;"	kind:variable	line:73
 __init__.py	../blog/__init__.py	1;"	kind:file	line:1
 __init__.py	../blog/migrations/__init__.py	1;"	kind:file	line:1
 __init__.py	../core/__init__.py	1;"	kind:file	line:1
 __init__.py	../home/__init__.py	1;"	kind:file	line:1
-__init__.py	../home/migrations/__init__.py	1;"	kind:file	line:1
+__unicode	../blog/models.py	/^    def __unicode(self):$/;"	kind:member	line:26
 admin.py	../blog/admin.py	1;"	kind:file	line:1
 admin.py	../home/admin.py	1;"	kind:file	line:1
 application	../core/wsgi.py	/^application = get_wsgi_application()$/;"	kind:variable	line:16
 apps.py	../blog/apps.py	1;"	kind:file	line:1
 apps.py	../home/apps.py	1;"	kind:file	line:1
-autor	../blog/models.py	/^    autor = models.ForeignKey('auth.User')$/;"	kind:variable	line:8
-data_cadastro	../blog/models.py	/^    data_cadastro = models.DateTimeField($/;"	kind:variable	line:12
-data_publicacao	../blog/models.py	/^    data_publicacao = models.DateTimeField($/;"	kind:variable	line:14
-default	../blog/models.py	/^        default=timezone.now)$/;"	kind:variable	line:13
+autor	../blog/models.py	/^    autor = models.ForeignKey('auth.User')$/;"	kind:variable	line:11
+data_publicacao	../blog/models.py	/^    data_publicacao = models.DateTimeField($/;"	kind:variable	line:16
 dependencies	../blog/migrations/0001_initial.py	/^    dependencies = [$/;"	kind:variable	line:15
-dependencies	../home/migrations/0001_initial.py	/^    dependencies = [$/;"	kind:variable	line:15
-dependencies	../home/migrations/0002_auto_20171001_0233.py	/^    dependencies = [$/;"	kind:variable	line:10
+dependencies	../blog/migrations/0002_remove_publicacao_data_cadastro.py	/^    dependencies = [$/;"	kind:variable	line:10
+dependencies	../blog/migrations/0003_publicacao_resumo.py	/^    dependencies = [$/;"	kind:variable	line:10
+dependencies	../blog/migrations/0004_auto_20171001_1354.py	/^    dependencies = [$/;"	kind:variable	line:10
+dependencies	../blog/migrations/0005_auto_20171001_1322.py	/^    dependencies = [$/;"	kind:variable	line:11
+field	../blog/migrations/0003_publicacao_resumo.py	/^            field=models.CharField(blank=True, max_length=500, null=True),$/;"	kind:variable	line:18
+field	../blog/migrations/0004_auto_20171001_1354.py	/^            field=models.TextField(blank=True, null=True),$/;"	kind:variable	line:18
+field	../blog/migrations/0005_auto_20171001_1322.py	/^            field=ckeditor.fields.RichTextField(),$/;"	kind:variable	line:25
+field	../blog/migrations/0005_auto_20171001_1322.py	/^            field=models.SlugField(default=1, max_length=100),$/;"	kind:variable	line:19
 fields	../blog/migrations/0001_initial.py	/^            fields=[$/;"	kind:variable	line:22
-fields	../home/migrations/0001_initial.py	/^            fields=[$/;"	kind:variable	line:22
+get_absolute_url	../blog/models.py	/^    def get_absolute_url(self):$/;"	kind:member	line:23
 initial	../blog/migrations/0001_initial.py	/^    initial = True$/;"	kind:variable	line:13
-initial	../home/migrations/0001_initial.py	/^    initial = True$/;"	kind:variable	line:13
 manage.py	../manage.py	1;"	kind:file	line:1
-model_name	../home/migrations/0002_auto_20171001_0233.py	/^            model_name='post',$/;"	kind:variable	line:16
+model_name	../blog/migrations/0002_remove_publicacao_data_cadastro.py	/^            model_name='publicacao',$/;"	kind:variable	line:16
+model_name	../blog/migrations/0003_publicacao_resumo.py	/^            model_name='publicacao',$/;"	kind:variable	line:16
+model_name	../blog/migrations/0004_auto_20171001_1354.py	/^            model_name='publicacao',$/;"	kind:variable	line:16
+model_name	../blog/migrations/0005_auto_20171001_1322.py	/^            model_name='publicacao',$/;"	kind:variable	line:17
+model_name	../blog/migrations/0005_auto_20171001_1322.py	/^            model_name='publicacao',$/;"	kind:variable	line:23
 models.py	../blog/models.py	1;"	kind:file	line:1
 models.py	../home/models.py	1;"	kind:file	line:1
 name	../blog/apps.py	/^    name = 'blog'$/;"	kind:variable	line:5
 name	../blog/migrations/0001_initial.py	/^            name='Publicacao',$/;"	kind:variable	line:21
+name	../blog/migrations/0002_remove_publicacao_data_cadastro.py	/^            name='data_cadastro',$/;"	kind:variable	line:17
+name	../blog/migrations/0003_publicacao_resumo.py	/^            name='resumo',$/;"	kind:variable	line:17
+name	../blog/migrations/0004_auto_20171001_1354.py	/^            name='resumo',$/;"	kind:variable	line:17
+name	../blog/migrations/0005_auto_20171001_1322.py	/^            name='slug',$/;"	kind:variable	line:18
+name	../blog/migrations/0005_auto_20171001_1322.py	/^            name='texto',$/;"	kind:variable	line:24
 name	../home/apps.py	/^    name = 'home'$/;"	kind:variable	line:5
-name	../home/migrations/0001_initial.py	/^            name='Post',$/;"	kind:variable	line:21
-name	../home/migrations/0002_auto_20171001_0233.py	/^            name='Post',$/;"	kind:variable	line:20
-name	../home/migrations/0002_auto_20171001_0233.py	/^            name='autor',$/;"	kind:variable	line:17
 operations	../blog/migrations/0001_initial.py	/^    operations = [$/;"	kind:variable	line:19
-operations	../home/migrations/0001_initial.py	/^    operations = [$/;"	kind:variable	line:19
-operations	../home/migrations/0002_auto_20171001_0233.py	/^    operations = [$/;"	kind:variable	line:14
-post_lista	../blog/views.py	/^def post_lista(request):$/;"	kind:function	line:6
-publicacao	../blog/models.py	/^    def publicacao(self):$/;"	kind:member	line:17
+operations	../blog/migrations/0002_remove_publicacao_data_cadastro.py	/^    operations = [$/;"	kind:variable	line:14
+operations	../blog/migrations/0003_publicacao_resumo.py	/^    operations = [$/;"	kind:variable	line:14
+operations	../blog/migrations/0004_auto_20171001_1354.py	/^    operations = [$/;"	kind:variable	line:14
+operations	../blog/migrations/0005_auto_20171001_1322.py	/^    operations = [$/;"	kind:variable	line:15
+post	../blog/views.py	/^def post(request, slug):$/;"	kind:function	line:15
+post_lista	../blog/views.py	/^def post_lista(request):$/;"	kind:function	line:9
+preserve_default	../blog/migrations/0005_auto_20171001_1322.py	/^            preserve_default=False,$/;"	kind:variable	line:20
+publicacao	../blog/models.py	/^    def publicacao(self):$/;"	kind:member	line:19
+resumo	../blog/models.py	/^    resumo = models.TextField(blank=True, null=True)$/;"	kind:variable	line:14
 settings.py	../core/settings.py	1;"	kind:file	line:1
+slug	../blog/models.py	/^    slug = models.SlugField(max_length=100)$/;"	kind:variable	line:12
 tests.py	../blog/tests.py	1;"	kind:file	line:1
 tests.py	../home/tests.py	1;"	kind:file	line:1
-texto	../blog/models.py	/^    texto = models.TextField()$/;"	kind:variable	line:10
-titulo	../blog/models.py	/^    titulo = models.CharField(max_length=255)$/;"	kind:variable	line:9
+texto	../blog/models.py	/^    texto = RichTextField()$/;"	kind:variable	line:15
+titulo	../blog/models.py	/^    titulo = models.CharField(max_length=255)$/;"	kind:variable	line:13
 urlpatterns	../blog/urls.py	/^urlpatterns = [$/;"	kind:variable	line:5
-urlpatterns	../core/urls.py	/^urlpatterns = [$/;"	kind:variable	line:19
+urlpatterns	../core/urls.py	/^urlpatterns = [$/;"	kind:variable	line:21
 urls.py	../blog/urls.py	1;"	kind:file	line:1
 urls.py	../core/urls.py	1;"	kind:file	line:1
 views.py	../blog/views.py	1;"	kind:file	line:1
