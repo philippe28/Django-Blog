@@ -7,10 +7,8 @@ from django.utils import timezone
 class Publicacao(models.Model):
     autor = models.ForeignKey('auth.User')
     titulo = models.CharField(max_length=255)
+    resumo = models.TextField(blank=True, null=True)
     texto = models.TextField()
-
-    data_cadastro = models.DateTimeField(
-        default=timezone.now)
     data_publicacao = models.DateTimeField(
         blank=True, null=True)
 

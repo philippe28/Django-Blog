@@ -1,5 +1,8 @@
 <html>
-<p>o la mundo</p>
 
+{% for post in posts %}
+<h1>{{ post.titulo }} </h1>
+<h4>{{ post.resumo }}</h4>
+<h5>{{ post.data_publicacao }} </h5>{% endfor %}
 
 </html>
