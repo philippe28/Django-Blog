@@ -1,4 +1,4 @@
-<html lang="en">
+{% extends 'blog/blog_base.html' %}
 {% block content %}
 <form action="/your-name/" method="post">
     {% csrf_token %}
@@ -8,4 +8,3 @@
     <input type="submit" value="Submit" />
 </form>
 {% endblock %}
-</html>
