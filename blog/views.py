@@ -20,7 +20,7 @@ def post(request, slug):
 
     return render(request, 'blog/post_detalhe.html', {'post': post})
 
-def contact(request):
+def contato(request):
     success = False
     form = Contato(request.POST or None)
     if form.is_valid():
@@ -32,4 +32,4 @@ def contact(request):
         'form': form,
         'success': success
     }
-    return render(request, 'contact.html', context)
+    return render(request, 'contato.html', context)

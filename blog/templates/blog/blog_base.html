@@ -1,0 +1,164 @@
+<!--exemplo de como chama arquivo estatico-->
+{% load staticfiles %}
+
+
+<!-- caso não atualize use o comando python manage.py collectstatic -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Canal RH</title>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link href='https://fonts.google.com/specimen/Raleway' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107293506-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments)
+    };
+    gtag('js', new Date());
+
+    gtag('config', 'UA-107293506-1');
+</script>
+
+</head>
+<body id="page-top">
+
+  <!--NavBar -->
+  <script src="js/bootstrap.min.js"></script>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="post_lista.html"><img src="{% static 'img/logo.png' %}"> </a>
+
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="categorias.html">Categorias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/">Materiais</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contato.html">Contato</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contato.html"><img src="{% static 'img/search.png' %}"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--Header -->
+  <header class="masthead" style="background-image: url('{% static 'img/banner.png' %}')">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 mx-auto">
+          <div class="site-heading">
+            <h2>Saiba como <b>gerir pessoas</b> e <b>alcançar resultados.</b></h1>
+              <span class="subheading">Cadastre-se para receber conteúdo de qualidade sobre RH.</span>
+            </div>
+            <form method="post" action="">
+              <div class="row col-md-12 control-label form">
+
+                <div class="col-md-2 formCad form-group">
+                  <input id="name" name="name" type="text" placeholder="Seu nome:" class="form-control input-md" required="">
+                </div>
+                <div class="col-md-3 formCad form-group">
+                  <input id="email" name="email" type="text" placeholder="Seu e-mail:(se possivel, e-mail corporativo)" class="form-control input-md" required="">
+                </div>
+                <div class="col-md-2 formCad form-group">
+                  <select id="selectFrequencia" name="selectFrequencia" class="form-control">
+                    <option value="1">Semanalmente</option>
+                    <option value="2">Mensalmente</option>
+                    <option value="3">Diariamente</option>
+                  </select>
+                </div>
+                <div class="col-md-2 formCad form-group">
+                  <button id="buttonCadastro" name="buttonCadastro" class="btn btn-cad">QUERO RECEBER</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+  <!--Conteudo -->
+  <div>
+  {% block content %}
+  {% endblock %}
+  </div>
+    
+
+
+  <div class="footerForm">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 mx-auto">
+        <div class="site-footer">
+          <h2>Gostou? Cadastre-se para receber mais conteúdos de qualidade.</b></h1>
+            <span class="subheading">Fique tranquilo! Não vamos encher sua caixa de entrada de spam.</span>
+          </div>
+          <form method="post" action="">
+            <div class="row col-md-12 control-label formFoot">
+
+              <div class="form-group">
+                <input id="name" name="name" type="text" placeholder="Seu nome:" class="form-control input-md" required="">
+              </div>
+              <div class="form-group">
+                <input id="email" name="email" type="text" placeholder="Seu e-mail:(se possivel, e-mail corporativo)" class="form-control input-md" required="">
+              </div>
+              <div class="form-group">
+                <select id="selectFrequencia" name="selectFrequencia" class="form-control">
+                  <option value="1">Semanalmente</option>
+                  <option value="2">Mensalmente</option>
+                  <option value="3">Diariamente</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <button id="buttonCadastro" name="buttonCadastro" class="btn btn-foot">QUERO RECEBER</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <!--Footer-->
+    <footer>
+
+      <div class="row col-lg-12 col-md-12 footer">
+
+        <div class="logo col-md-2 ">
+          <img src="{% static 'img/logo.png' %}" id="imgLogo">
+        </div>
+        <div class="col-md-5">
+          <p class="textFooter">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum</p>
+          </div>
+          <div class="col-md-2 icon-face">
+            <img src="{% static 'img/icon-facebook-footer.png' %}">
+          </div>
+        </div>
+      </footer>
+    </body>
+	<!-- <a href="{{ post.get_absolute_url }}" class="btn btn-success" role="button">Detalhes</a> !-->
+</html>
