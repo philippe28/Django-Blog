@@ -1,0 +1,11 @@
+<html lang="en">
+{% block content %}
+<form action="/your-name/" method="post">
+    {% csrf_token %}
+    
+	{{ form.nome }}
+	{{ form.email }}
+    <input type="submit" value="Submit" />
+</form>
+{% endblock %}
+</html>
