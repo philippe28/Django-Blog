@@ -7,7 +7,7 @@ from .models import Publicacao
 
 
 def post_lista(request):
-    print("oi")
+    
     posts = Publicacao.objects.order_by('-data_publicacao')
     return render(request, 'blog/post_lista.html', {'posts': posts})
 

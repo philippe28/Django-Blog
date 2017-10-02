@@ -7,6 +7,20 @@
     {{ post.texto|safe }}
 
 </div>
-<a href="{{ post.get_absolute_url }}" class="btn btn-success" role="button">Detalhes</a> {% endfor %} oi
+<a href="{{ post.get_absolute_url }}" class="btn btn-success" role="button">Detalhes</a> {% endfor %}
 
 </html>
+
+
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107293506-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments)
+    };
+    gtag('js', new Date());
+
+    gtag('config', 'UA-107293506-1');
+</script>

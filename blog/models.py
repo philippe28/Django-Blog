@@ -23,5 +23,12 @@ class Publicacao(models.Model):
     def get_absolute_url(self):
         return reverse('post_detalhe', kwargs={'slug': self.slug})
 
-    def __unicode(self):
-        return self.title
+
+    def __str__(self):
+        return self.titulo
+
+
+    class Meta:
+        verbose_name = 'Publicação'
+        verbose_name_plural = 'Publicações'
+        ordering = ['-data_publicacao']
