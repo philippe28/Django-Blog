@@ -35,4 +35,4 @@ def contato(request):
     return render(request, 'contato.html', context)
 	
 def contatop(request):
-return render(request, 'blog/contato.html', {'post': post})
+return render(request, 'blog/contato.html', context)
