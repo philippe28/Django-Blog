@@ -116,10 +116,11 @@
             <span class="subheading">Fique tranquilo! Não vamos encher sua caixa de entrada de spam.</span>
           </div>
           <form method="post" action="">
+            {% csrf_token %}
             <div class="row col-md-12 control-label formFoot">
 
               <div class="form-group">
-                 {% csrf_token %} 
+
                 <input id="name" name="nome" type="text" placeholder="Seu nome:" class="form-control input-md" required="">
               </div>
               <div class="form-group">
