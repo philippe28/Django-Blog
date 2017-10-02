@@ -11,10 +11,14 @@ class Publicacao(models.Model):
     autor = models.ForeignKey('auth.User')
     slug = models.SlugField(max_length=100)
     titulo = models.CharField(max_length=255)
-    resumo = models.TextField(blank=True, null=True)
+    resumo = models.TextField(blank=True, null=True, max_length=200)
     texto = RichTextField()
     data_publicacao = models.DateTimeField(
         blank=True, null=True)
+
+    image = models.ImageField(
+        'Imagem', upload_to='blog/static/img', blank=True, null=True
+    )
 
     def publicacao(self):
         self.data_publicacao = timezone.now()
@@ -23,10 +27,8 @@ class Publicacao(models.Model):
     def get_absolute_url(self):
         return reverse('post_detalhe', kwargs={'slug': self.slug})
 
-
     def __str__(self):
         return self.titulo
-
 
     class Meta:
         verbose_name = 'Publicação'
