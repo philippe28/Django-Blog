@@ -1,0 +1,8 @@
+
+*.pyc
+blog/__pycache__/__init__.cpython-36.pyc
+blog/__pycache__/__init__.cpython-36.pyc
+blog/__pycache__/admin.cpython-36.pyc
+*.pyc
+db.sqlite3
+*.sqlite3

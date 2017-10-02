@@ -21,7 +21,7 @@
 </head>
 <body id="page-top">
 
-
+  <!--NavBar -->
   <script src="js/bootstrap.min.js"></script>
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
@@ -49,7 +49,7 @@
     </div>
   </nav>
 
-  <!-- Page Header -->
+  <!--Header -->
   <header class="masthead" style="background-image: url('img/banner.png')">
     <div class="container">
       <div class="row">
@@ -85,30 +85,80 @@
       </div>
     </div>
   </header>
-
+  <!--Conteudo -->
   <div class="container">
     <div class="row post-preview col-md-12 post">
 
-      <div class="col-md-3 post">
-        <img src="img/imagem-post-interno.png " >
+      <div class="col-md-4 post">
+        <img src="img/imagem-post-interno.png" id="imgPost" >
       </div>
-      <div class="col-md-5">
+      <div class="col-md-6">
 
-          <h4 class="post-title">
-            Man must explore, and this is exploration at its greatest
-          </h4>
-          <span class="post-desc">
-            Problems look mighty small from 150 miles up
-          </span>
-          <div>
-            <button id="buttonLeia" name="buttonLeia" class="btn btn-leia">Leia mais +</button>
+        <h5 class="post-title">
+          Man must explore, and this is exploration at its greatest
+        </h5>
+        <span class="post-desc">
+          Problems look mighty small from 150 miles up
+        </span>
+        <div>
+          <button id="buttonLeia" name="buttonLeia" class="btn btn-leia">Leia mais +</button>
+        </div>
+      </div>
+      <div class="anuncios col-md-2">
+
+      </div>
+    </div>
+    <hr>
+  </div>
+
+  <div class="footerForm">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 mx-auto">
+        <div class="site-footer">
+          <h2>Gostou? Cadastre-se para receber mais conteúdos de qualidade.</b></h1>
+            <span class="subheading">Fique tranquilo! Não vamos encher sua caixa de entrada de spam.</span>
+          </div>
+          <form method="post" action="">
+            <div class="row col-md-12 control-label formFoot">
+
+              <div class="form-group">
+                <input id="name" name="name" type="text" placeholder="Seu nome:" class="form-control input-md" required="">
+              </div>
+              <div class="form-group">
+                <input id="email" name="email" type="text" placeholder="Seu e-mail:(se possivel, e-mail corporativo)" class="form-control input-md" required="">
+              </div>
+              <div class="form-group">
+                <select id="selectFrequencia" name="selectFrequencia" class="form-control">
+                  <option value="1">Semanalmente</option>
+                  <option value="2">Mensalmente</option>
+                  <option value="3">Diariamente</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <button id="buttonCadastro" name="buttonCadastro" class="btn btn-foot">QUERO RECEBER</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <!--Footer-->
+    <footer>
+
+      <div class="row col-lg-12 col-md-12 footer">
+
+        <div class="logo col-md-2 ">
+          <img src="img/logo.png" id="imgLogo">
+        </div>
+        <div class="col-md-5">
+          <p class="textFooter">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum</p>
+          </div>
+          <div class="col-md-2 icon-face">
+            <img src="img/icon-facebook-footer.png">
           </div>
         </div>
-        <div class="anuncios col-md-4">
-        </div>
-      </div>
-        <hr>
-    </div>
-  </body>
-
-  </html>
+      </footer>
+    </body>
+    </html>
