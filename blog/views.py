@@ -33,3 +33,6 @@ def contato(request):
         'success': success
     }
     return render(request, 'contato.html', context)
+	
+def contatop(request):
+return render(request, 'blog/contato.html', {'post': post})
