@@ -1,0 +1,161 @@
+body {
+  font-size: 20px;
+  color: #000;
+  font-family: 'Raleway'; }
+
+p {
+  line-height: 1.5;
+  margin: 30px 0;
+}
+p a {
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 800;
+  font-family: 'Raleway';
+}
+
+img{
+  width: 100%;
+  height: 100%;
+}
+
+#mainNav {
+  position: absolute;
+  font-family: 'Raleway';
+}
+  #mainNav .navbar-brand {
+    font-weight: 800;
+    color: #777777;
+  }
+  #mainNav .navbar-toggler {
+    font-size: 12px;
+    font-weight: 800;
+    padding: 13px;
+    text-transform: uppercase;
+    color: #777777;
+   }
+  #mainNav .navbar-nav > li.nav-item > a {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  @media only screen and (min-width: 992px) {
+    #mainNav {
+      border-bottom: 1px solid transparent;
+      background: transparent; }
+      #mainNav .navbar-brand {
+        padding: 15px 20px;
+        color: white; }
+        #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+          color: rgba(255, 255, 255, 0.8); }
+      #mainNav .navbar-nav > li.nav-item > a {
+        padding: 15px 20px;
+        color: white; }
+        #mainNav .navbar-nav > li.nav-item > a:focus, #mainNav .navbar-nav > li.nav-item > a:hover {
+          color: rgba(255, 255, 255, 0.8); } }
+
+
+header.masthead {
+  margin-bottom: 50px;
+  background: no-repeat center center;
+  background-color: #777777;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  header.masthead .page-heading,
+  header.masthead .post-heading,
+  header.masthead .site-heading {
+    padding: 200px 0 150px;
+    color: white; }
+    @media only screen and (min-width: 768px) {
+      header.masthead .page-heading,
+      header.masthead .post-heading,
+      header.masthead .site-heading {
+        padding: 150px 0 48px; } }
+  header.masthead .page-heading,
+  header.masthead .site-heading {
+    text-align: left;
+    margin-left: 2%;}
+    header.masthead .page-heading h1,
+    header.masthead .site-heading h1 {
+      font-size: 50px;
+      margin-top: 0; }
+    header.masthead .page-heading .subheading,
+    header.masthead .site-heading .subheading {
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 1.1;
+      display: block;
+      margin: 10px 0 0;
+      font-family: 'Raleway','Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    @media only screen and (min-width: 768px) {
+      header.masthead .page-heading h1,
+      header.masthead .site-heading h1 {
+        font-size: 80px; } }
+  header.masthead .post-heading h1 {
+    font-size: 35px; }
+  header.masthead .post-heading .meta,
+  header.masthead .post-heading .subheading {
+    line-height: 1.1;
+    display: block; }
+  header.masthead .post-heading .subheading {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 10px 0 30px;
+    font-family: 'Raleway', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+  header.masthead .post-heading .meta {
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+    font-family: 'Raleway','Lora', 'Times New Roman', serif; }
+    header.masthead .post-heading .meta a {
+      color: white; }
+  @media only screen and (min-width: 768px) {
+    header.masthead .post-heading h1 {
+      font-size: 55px; }
+    header.masthead .post-heading .subheading {
+      font-size: 30px; } }
+
+  .form-group{
+      margin-bottom: 2rem;
+      margin-left: 1% !important;
+  }
+  .form-control {
+    font-family: 'Raleway';
+    font-size: 12px;
+    border-radius: 0 !important;
+  }
+
+  select.form-control:not([size]):not([multiple]){
+    height: auto !important;
+  }
+
+  .btn{
+    font-size: 14px;
+    line-height: 1.25;
+    border-radius: 3.25rem;
+
+  }
+  .btn-cad {
+      color: #000;
+      background-color: #ffc107;
+      border-color: #ffc107;
+
+  }
+
+.post{
+  margin-left: 7%;
+}
+
+.btn-leia{
+  margin-top: 10%;
+  color: #000;
+  background-color: #ffc107;
+  border-color: #ffc107;
+  padding: 0.5rem 1.75rem;
+}
