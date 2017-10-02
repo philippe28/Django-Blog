@@ -5,7 +5,7 @@
     <div class="row post-preview col-md-12 post">
 	{% for post in posts %}
       <div class="col-md-4 post">
-        <img src="{{ post.img }}" id="imgPost" >
+        <img src="{{ post.imagem }}" id="imgPost" >
       </div>
       <div class="col-md-6">
 	  
@@ -20,7 +20,7 @@
 
         
         <div>
-          <button id="buttonLeia" name="buttonLeia" class="btn btn-leia"><a href="{{ post.get_absolute_url }}">Leia mais +</a></button>
+          <a href="{{ post.get_absolute_url }}"><button id="buttonLeia" name="buttonLeia" class="btn btn-leia">Leia mais +</button></a>
         </div>
       </div>
       <div class="anuncios col-md-2">
