@@ -170,6 +170,18 @@ header.masthead {
   width: 100%;
   padding-left: 30%;
 
+}
+
+.postextras{
+  width: 100%;
+  margin-bottom: 40px;
+  float:right;
+}
+
+.postimg{
+  width: 100%;
+  position:relative;
+  float:center;
 
 }
 
