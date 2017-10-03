@@ -37,13 +37,12 @@ def post(request, slug):
 
 
 def contato(request):
-    success = False
+    
     form = ContatoForm(request.POST or None)
     if form.is_valid():
-        post = form.save(commit=False)
-        post.nome = request.nome
-        post.email = request.email
-        print(post.nome)
-        post.save()
+        contato = form.save(commit=False)
+        contato.nome = request.POST['nome']
+        contato.email = request.POST['email']
+        contato.save()
 
-    return render(request, 'contato.html', context)
+    return render(request, 'blog/contato.html')
