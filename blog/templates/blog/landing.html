@@ -1,18 +1,18 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<body style="background-image: url('{% static 'img/landingimg.png' %}')>
-	<div main">
-	<link rel="stylesheet" href="{% static 'css/landing2.css' %}">
+<body>
+	<div class="tamanho" background="https://drive.google.com/open?id=0B2UzCE63W2uCZkhJeXZFdDN2cjA">
+	<link rel="stylesheet" href="{% static 'css/landing.css' %}">
 	<script src="{% static 'js/bootstrap.min.js' %}"></script>
-	<form class="" method="post" action="#">{% csrf_token %}
+	<form class="" method="post" action="/">{% csrf_token %}
 	<div class="container">
 
 
-		<div class="col-lg-offset-4 col-lg-4" id="panel">
-			<h2>Get In Touch</h2>
+		<div class="col-lg-offset-2 col-lg-2" id="panel" >
+			<h2>Baixe nosso ebook sobre   </h2>
 
-			<form>
+			
 
 				<div class="group">
 					<input id="name" name="nome" type="text" placeholder="Seu nome completo:" class="form-control input-md" required="">
@@ -29,9 +29,9 @@
 				</div>
 
 				<div class="group">
-					<center> <button type="submit" class="btn btn-warning">Baixar <span class="glyphicon glyphicon-send"></span></button></center>
+					<button type="submit" class="buttonbaixar">Baixar E-Book</button>
 				</div>
-			</form>
+			
 
 		</div>
 	</div>

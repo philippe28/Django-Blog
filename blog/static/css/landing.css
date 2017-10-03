@@ -1,9 +1,42 @@
 
+h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #fff;
+}
+.tamanho
+{
+    margin: auto;
+    margin-bottom: 50px;
+	width: 350px;
+	height: 100px;
+}
+
+
+/* form starting stylings ------------------------------- */
+.group {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+input {
+    font-size: 18px;
+    padding: 5px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+}
+
+    input:focus {
+        outline: none;
+    }
 
 /* LABEL ======================================= */
 label {
     color: #fff;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: normal;
     position: absolute;
     pointer-events: none;
@@ -17,7 +50,7 @@ label {
 /* active state */
 input:focus ~ label, input:valid ~ label {
     top: -20px;
-    font-size: 14px;
+    font-size: 16px;
     color: #fff;
 }
 
@@ -121,4 +154,17 @@ input:focus ~ .highlight {
     
     border-radius: 4px;
     top: 50px;
+}
+/* Botao de baixar estilizado */
+.buttonbaixar {
+  display: block;
+  width: 150px;
+  height: 45px;
+  line-height: 45px;
+  margin: 125px auto 0;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+  background: #A38CDC;
+  color: #fff;
 }
