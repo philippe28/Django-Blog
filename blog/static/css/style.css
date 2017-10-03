@@ -1,7 +1,8 @@
 body {
   font-size: 20px;
   color: #000;
-  font-family: 'Raleway'; }
+  font-family: 'Raleway', sans-serif;
+ }
 
 p {
   line-height: 1.5;
@@ -124,15 +125,13 @@ header.masthead {
   .form-group{
       margin-bottom: 2rem;
       margin-left: 1% !important;
-      font-weight: bold;
-
-
   }
+
   .form-control {
     font-family: 'Raleway';
     font-size: 12px;
     border-radius: 0 !important;
-    font-weight: bold;
+
 
   }
 
@@ -148,8 +147,8 @@ header.masthead {
   }
   .btn-cad {
       color: #000;
-      background-color: #ffc107;
-      border-color: #ffc107;
+      background-color: #ffcb04;
+      border-color: #ffcb04;
 
   }
 .post-title, .post-desc{
@@ -158,7 +157,7 @@ header.masthead {
 }
 .post{
   width: 100%;
-  
+
 }
 
 .postdetalhe{
@@ -173,8 +172,8 @@ header.masthead {
   margin-top: 10px;
 
   color: #000;
-  background-color: #ffc107;
-  border-color: #ffc107;
+  background-color: #ffcb04;
+  border-color: #ffcb04;
   padding: 0.5rem 1.75rem;
   font-weight: bold;
 }
@@ -184,7 +183,7 @@ header.masthead {
 .footerForm{
   text-align: center;
   margin-top: 50px;
-  background: #ffc107;
+  background: #ffcb04;
 }
 .btn-foot{
   font-weight: bold;
@@ -201,7 +200,7 @@ header.masthead {
 }
 
 footer{
-  background: #000;
+  background: #333132;
 }
 .logo{
   margin-left: 17%;
