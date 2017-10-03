@@ -42,12 +42,26 @@ def contato(request):
     
     form = ContatoForm(request.POST or None)
     if form.is_valid():
+		
+			
         contato = form.save(commit=False)
         contato.nome = request.POST.get('nome', '')
         contato.email = request.POST.get('email', '')
-        """"contato.save() """
+		
+        """contato.save()"""
 
     return render(request, 'blog/contato.html')
+	
+def landing(request):
+    
+    form = ContatoForm(request.POST or None)
+    if form.is_valid():
+        contato = form.save(commit=False)
+        contato.nome = request.POST['nome']
+        contato.email = request.POST['email']
+        contato.save()
+
+    return render(request, 'blog/landing.html')
 
 def send_email(request):
     subject = request.POST.get('subject', '')
