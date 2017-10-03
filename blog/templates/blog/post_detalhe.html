@@ -1,21 +1,18 @@
 {% extends 'blog/blog_base.html' %}
 {% block content %}
   <!--Conteudo -->
-  <div class="container">
-    <div class="row post-preview col-md-12 post">
-	<div class="post">
-	<div class="post-title">{{post.titulo}}</div>
 
-		<div class="post-desc">
-			{{ post.texto|safe }}
-			
-		</div>
+    	<div class="post">
+    	<div class="post-title">{{post.titulo}}</div>
+    		<div class="post-desc">
+    			{{ post.texto|safe }}
+    		</div>
 		  <div class="anuncios col-md-2">
-				
+
 		  </div>
-		  
+
 		</div>
-    <hr>
+
 	</div>
-  </div>
+  
 {% endblock %}
