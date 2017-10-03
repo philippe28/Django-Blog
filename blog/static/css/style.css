@@ -2,6 +2,7 @@ body {
   font-size: 20px;
   color: #000;
   font-family: 'Raleway', sans-serif;
+  overflow-x: hidden;
  }
 
 p {
