@@ -1,8 +1,9 @@
 {% extends 'blog/blog_base.html' %} {% block content %}
 <!--Conteudo -->
-<div class="container">
-    <div class="row post-preview col-md-12 post">
+
+
     {% for post in posts %}
+    <div class="row post-preview col-md-12 post">
     <div class="col-md-4 post">
       <img src="{{ post.image }}" id="imgPost">
     </div>
@@ -12,12 +13,7 @@
 
         <h3 class="post-title">{{ post.titulo }}</h3>
         <span class="post-desc">{{ post.resumo }} </span>
-
-
       </div>
-
-
-
       <div>
         <a href="{{ post.get_absolute_url }}"><button id="buttonLeia" name="buttonLeia" class="btn btn-leia">Leia mais +</button></a>
       </div>
@@ -25,15 +21,11 @@
     <div class="anuncios col-md-2">
 
     </div>
+</div>
     <hr>
+
     {% endfor %}
-<<<<<<< HEAD
 
-</div>
-=======
-  </div>
-  <hr>
->>>>>>> 4b3935c4c9ae544906cb23732ecdb21a3729cfdb
 
-</div>
+
 {% endblock %}
