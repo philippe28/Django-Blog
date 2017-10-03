@@ -1,25 +1,20 @@
-{% extends 'blog/blog_base.html' %}
-{% block content %}
-{% load static %}
-  <!--Conteudo -->
-  <div class="container">
-    <div class="row post-preview col-md-12 post">
-	<div class="postdetalhe"><img src="{{ post.image }}" alt=""></div>
-	<div class="postextras"> 
-	<a href="www.fb.com/"><img src="{% static 'img/icon-facebook-share.png' %}"></img></a>
-	<a href="www.gplus.com/"><img src="{% static 'img/icon-google-share.png' %}"></img></a>
-	<a href="www.linkedin.com/"><img src="{% static 'img/icon-linkedin-share.png' %}"></img></a>
-	<a href="www.twitter.com/canaldorh"><img src="{% static 'img/icon-twitter-share.png' %}"></img></a>
-	</div>
-		<div class="postdetalhe">
-		<div class="post-title"><h3>{{post.titulo}}</h3></div>
-			
+{% extends 'blog/blog_base.html' %} {% block content %}
+<!--Conteudo -->
+<div class="container">
+	<div class="row post-preview col-md-12 post">
+		<div class="post">
+			<div class="post-title">{{post.titulo}}</div>
+
 			<div class="post-desc">
 				{{ post.texto|safe }}
+
 			</div>
-			  
-		</div>	
-    <hr>
+			<div class="anuncios col-md-2">
+
+			</div>
+
+		</div>
+		<hr>
 	</div>
-  </div>
+</div>
 {% endblock %}
