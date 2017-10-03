@@ -151,9 +151,13 @@ header.masthead {
       border-color: #ffcb04;
 
   }
-.post-title, .post-desc{
+.post-title,
   width: 100%;
 
+}
+.post-desc{
+  width: 100%;
+  font-size: 14px;
 }
 .post{
   width: 100%;
@@ -163,8 +167,8 @@ header.masthead {
 .postdetalhe{
   width: 100%;
   padding-left: 30%;
-  
-  
+
+
 }
 
 .btn-leia{
