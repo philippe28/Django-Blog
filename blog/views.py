@@ -58,8 +58,8 @@ def landing(request):
     if form.is_valid():
 	
         contato = form.save(commit=False)
-        contato.nome = request.POST.get('nome', '')
-        contato.email = request.POST.get('email', '')
+        contato.nome = request.POST['nome']
+        contato.email = request.POST['email']
 		
         contato.save()
 
