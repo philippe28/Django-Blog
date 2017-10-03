@@ -9,6 +9,7 @@ from .models import Publicacao, Contato
 from .forms import ContatoForm
 
 
+
 def post_lista(request):
 
     posts = Publicacao.objects.order_by('-data_publicacao')
@@ -39,31 +40,43 @@ def post(request, slug):
 
 
 def contato(request):
-    
-    form = ContatoForm(request.POST or None)
-    if form.is_valid():
-		
-			
-        contato = form.save(commit=False)
-        contato.nome = request.POST.get('nome', '')
-        contato.email = request.POST.get('email', '')
-		
-        contato.save()
 
-    return render(request, 'blog/contato.html')
-	
-def landing(request):
-    
     form = ContatoForm(request.POST or None)
     if form.is_valid():
-	
+        x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+        if x_forwarded_for:
+            ip = x_forwarded_for.split(',')[0]
+        else:
+            ip = request.META.get('REMOTE_ADDR')
+
         contato = form.save(commit=False)
         contato.nome = request.POST['nome']
         contato.email = request.POST['email']
-		
+        contato.ip = ip
+
         contato.save()
 
-    return render(request, 'blog/landing.html')
+    return render(request, 'blog/landing.html',)
+	
+
+def landing(request):
+
+    form = ContatoForm(request.POST or None)
+    if form.is_valid():
+        x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+        if x_forwarded_for:
+            ip = x_forwarded_for.split(',')[0]
+        else:
+            ip = request.META.get('REMOTE_ADDR')
+
+        contato = form.save(commit=False)
+        contato.nome = request.POST['nome']
+        contato.email = request.POST['email']
+        contato.ip = ip
+
+        contato.save()
+
+    return render(request, 'blog/landing.html',)
 
 def send_email(request):
     subject = request.POST.get('subject', '')
