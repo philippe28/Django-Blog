@@ -4,8 +4,8 @@ body{
   background-repeat: no-repeat;
   background-position: top;
   background-attachment: fixed;
-  font-family: 'Raleway';
-  font-weight: 800;
+  font-family: 'Raleway', sans-serif;
+
 }
 h2 {
     text-align: center;
@@ -22,6 +22,7 @@ h4 {
 {
     float:right;
 	margin-top: 50px;
+	margin-right: 350px;
 
 }
 .landprincipal{
@@ -33,7 +34,8 @@ h4 {
 	text-align: center;
     font-size: 60px;
     color: #fff;
-	margin-top: 50px;
+	margin-top: 220px;
+	margin-left: 100px;
 	line-height: 80%;
 	
 }
@@ -168,6 +170,7 @@ input:focus ~ .highlight {
     background: -webkit-linear-gradient(90deg, #333132 0%, #333132 60%);
     background: #333132; /* For browsers that do not support gradients */
 	filter: alpha(opacity=60);
+	opacity: 0.6;
     background: -webkit-linear-gradient(90deg, #333132 0%, #333132 60%); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(90deg, #333132 0%, #333132 60%); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(90deg, #333132 0%, #333132 60%); /* For Firefox 3.6 to 15 */
