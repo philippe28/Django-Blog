@@ -24,11 +24,11 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('blog.urls')),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:
-    + static(
-        settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
-    )
-else:
-    + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += [
+        url(r'^media/(?P<path>.*)$', serve, {
+            'document_root': settings.MEDIA_ROOT,
+        }),
+    ]

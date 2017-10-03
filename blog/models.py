@@ -16,9 +16,11 @@ class Publicacao(models.Model):
     data_publicacao = models.DateTimeField(
         blank=True, null=True)
 
-    image = models.ImageField(
+    """    image = models.ImageField(
         'Imagem', upload_to='publicacao', blank=True, null=True
-    )
+    )"""
+
+    image = models.CharField(max_length=255, blank=True, null=True)
 
     def publicacao(self):
         self.data_publicacao = timezone.now()
