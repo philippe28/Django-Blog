@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<div class="modal" id="modalpopup" style="background-image: url('{% static 'img/landingimg.png' %}')">
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/modal.js' %}"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <div class="modal-conteudo">
+	
+		<div class="container">
+			<div class="row main">
+				<div class="main-login main-center">
+				<h5>Baixe nosso ebook sobre XXXXXXX.</h5>
+					<form class="" method="post" action="#">{% csrf_token %}
+						
+						<div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Nome Completo</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<input id="name" name="nome" type="text" placeholder="Seu nome completo:" class="form-control input-md" required="">
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="email" class="cols-sm-2 control-label">Email (De prefencia corporativo)</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+									<input id="email" name="email" type="text" placeholder="Seu e-mail:(se possivel, e-mail corporativo)" class="form-control input-md" required="">
+
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group ">
+							<button id="buttonCadastro" name="buttonCadastro" class="btn btn-cad">Baixe agora</button>
+						</div>
+						
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</html>
