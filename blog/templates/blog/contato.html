@@ -1,10 +1,6 @@
-{% extends 'blog/blog_base.html' %}
-{% block content %}
-<form action="/your-name/" method="post">
-    {% csrf_token %}
-    
-	{{ form.nome }}
-	{{ form.email }}
+{% extends 'blog/blog_base.html' %} {% block content %}
+<form action="/contato" method="post">
+    {% csrf_token %} {{ form.nome }} {{ form.email }}
     <input type="submit" value="Submit" />
 </form>
 {% endblock %}

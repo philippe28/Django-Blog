@@ -1,9 +1,10 @@
 # coding=utf-8
 
 from django import forms
+from .models import Contato
 
 
-
-class Contato(forms.Form):
-    name = forms.CharField(label='nome')
-    email = forms.EmailField(label='email')
+class ContatoForm(forms.ModelForm):
+    class Meta:
+        model = Contato
+        fields = ('nome', 'email')
