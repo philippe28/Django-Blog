@@ -173,18 +173,23 @@ header.masthead {
 
 }
 
+.detalhe{
+	width: 100%;
+}
+
 .postextras{
-  width: 50%;
+  width: 100%;
   float:right;
 }
 
 .infodetalhe{
-  width: 100%;
+  width: 50%;
   float:left;
 }
 
 .postimg{
   width: 100%;
+  margin-bottom: 5px;
   position:relative;
   float:center;
 
