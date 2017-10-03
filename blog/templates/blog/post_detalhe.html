@@ -3,18 +3,25 @@
 <div class="container">
 	<div class="row post-preview col-md-12 post">
 		<div class="postimg"><img src="{{ post.image }}" alt=""></div>
-		<div class="postextras"> 
+		<div class="detalhe">
+			<div class="infodetalhe">
+			<h6>{{post.data_publicacao}}</h6>
+			<div class="postextras"> 
+			
+			<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.canaldorh.com{{ post.get_absolute_url }}"><img src="{% static 'img/icon-facebook-share.png' %}"></img></a>
+			<a href="https://plus.google.com/share?url=http%3A%2F%2Fwww.canaldorh.com{{ post.get_absolute_url }}"><img src="{% static 'img/icon-google-share.png' %}"></img></a>
+			<a href="https://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source=http%3A%2F%2Fwww.canaldorh.com{{ post.get_absolute_url }}"><img src="{% static 'img/icon-linkedin-share.png' %}"></img></a>
+			<a href="https://twitter.com/home?status=http%3A%2F%2Fwww.canaldorh.com{{ post.get_absolute_url }}"><img src="{% static 'img/icon-twitter-share.png' %}"></img></a>
+			</div>
+			</div>
 		
-		<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.canaldorh.com{{ post.get_absolute_url }}"><img src="{% static 'img/icon-facebook-share.png' %}"></img></a>
-		<a href="https://plus.google.com/share?url=http%3A%2F%2Fwww.canaldorh.com{{ post.get_absolute_url }}"><img src="{% static 'img/icon-google-share.png' %}"></img></a>
-		<a href="https://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source=http%3A%2F%2Fwww.canaldorh.com{{ post.get_absolute_url }}"><img src="{% static 'img/icon-linkedin-share.png' %}"></img></a>
-		<a href="https://twitter.com/home?status=http%3A%2F%2Fwww.canaldorh.com{{ post.get_absolute_url }}"><img src="{% static 'img/icon-twitter-share.png' %}"></img></a>
+		<img src="https://lh4.googleusercontent.com/lZLRzcKiVutlRrcxpKACpIimYVPKVsKg2ozDQ8Rq5Y2svEKGIbtbAAd4P2_dhHBEEeqKG4WsIqowGpw=w1366-h637-rw" height="150" width="1000">
 		</div>
 		<div class="post">
 			<div class="post-title"><h3>{{post.titulo}}</h3></div>
 
 			<div class="post-desc">
-				<h6>{{ post.texto|safe }}</h6>
+				{{ post.texto|safe }}
 
 			</div>
 			
