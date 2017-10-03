@@ -17,7 +17,7 @@ class Publicacao(models.Model):
         blank=True, null=True)
 
     image = models.ImageField(
-        'Imagem', upload_to='blog/static/img', blank=True, null=True
+        'Imagem', upload_to='publicacao', blank=True, null=True
     )
 
     def publicacao(self):
