@@ -2,50 +2,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <body style="background-image: url('{% static 'img/landingimg.png' %}')>
-	<div class="landpage main">
-	<link rel="stylesheet" href="{% static 'css/landing.css' %}">
+	<div main">
+	<link rel="stylesheet" href="{% static 'css/landing2.css' %}">
 	<script src="{% static 'js/bootstrap.min.js' %}"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-	<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
-    <div class="conteudo">
-	
-		<div class="container">
-			<div class="row main">
-				<div class="main-login main-center">
-				<h2>Baixe nosso ebook sobre soft skills.</h2>
-					<form class="" method="post" action="#">{% csrf_token %}
-						
-						<div class="form-group">
-							<label for="name" class="cols-sm-2 control-label">Nome Completo</label>
-							<div class="cols-sm-12">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-									<input id="name" name="nome" type="text" placeholder="Seu nome completo:" class="form-control input-md" required="">
-								</div>
-							</div>
-						</div>
+	<form class="" method="post" action="#">{% csrf_token %}
+	<div class="container">
 
-						<div class="form-group">
-							<label for="email" class="cols-sm-2 control-label">Email (De prefencia corporativo)</label>
-							<div class="cols-sm-12">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-									<input id="email" name="email" type="text" placeholder="Seu e-mail:(se possivel, e-mail corporativo)" class="form-control input-md" required="">
 
-								</div>
-							</div>
-						</div>
-						<div class="form-group ">
-							<a href="/" target="_self" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Baixe agora</a>
-						</div>
-						
-					</form>
+		<div class="col-lg-offset-4 col-lg-4" id="panel">
+			<h2>Get In Touch</h2>
+
+			<form>
+
+				<div class="group">
+					<input id="name" name="nome" type="text" placeholder="Seu nome completo:" class="form-control input-md" required="">
+					<span class="highlight"></span>
+					<span class="bar"></span>
+					<label>Nome</label>
 				</div>
-			</div>
+
+				<div class="group">
+					<input id="email" name="email" type="text" placeholder="Seu e-mail:(se possivel, e-mail corporativo)" class="form-control input-md" required="">
+					<span class="highlight"></span>
+					<span class="bar"></span>
+					<label>Email</label>
+				</div>
+
+				<div class="group">
+					<center> <button type="submit" class="btn btn-warning">Baixar <span class="glyphicon glyphicon-send"></span></button></center>
+				</div>
+			</form>
+
 		</div>
 	</div>
-</div>
+	</form>
+	</div>
 </body>
 </html>

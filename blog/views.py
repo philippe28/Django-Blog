@@ -56,7 +56,7 @@ def contato(request):
 
         contato.save()
 
-    return render(request, 'blog/landing.html',)
+    return render(request, 'blog/contato.html',)
 	
 
 def landing(request):
