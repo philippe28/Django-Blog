@@ -20,19 +20,6 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
-<!-- Global Site Tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107293506-1"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-        dataLayer.push(arguments)
-    };
-    gtag('js', new Date());
-
-    gtag('config', 'UA-107293506-1');
-</script>
-
 </head>
 <body id="page-top">
 
@@ -73,11 +60,11 @@
             <h2>Saiba como <b>gerir pessoas</b> e <b>alcançar resultados.</b></h1>
               <span class="subheading">Cadastre-se para receber conteúdo de qualidade sobre RH.</span>
             </div>
-            <form method="post" action="">
+            <form method="post" action="">{% csrf_token %}
               <div class="row col-md-12 control-label form">
 
                 <div class="col-md-2 formCad form-group">
-                  <input id="name" name="name" type="text" placeholder="Seu nome:" class="form-control input-md" required="">
+                  <input id="name" name="nome" type="text" placeholder="Seu nome:" class="form-control input-md" required="">
                 </div>
                 <div class="col-md-3 formCad form-group">
                   <input id="email" name="email" type="text" placeholder="Seu e-mail:(se possivel, e-mail corporativo)" class="form-control input-md" required="">
@@ -161,5 +148,17 @@
         </div>
       </footer>
     </body>
+	<!-- Global Site Tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107293506-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments)
+		};
+		gtag('js', new Date());
+
+		gtag('config', 'UA-107293506-1');
+	</script>
 
 </html>
