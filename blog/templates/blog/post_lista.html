@@ -1,7 +1,7 @@
 {% extends 'blog/blog_base.html' %} {% block content %}
 <!--Conteudo -->
 <div class="container">
-  <div class="row post-preview col-md-12 post">
+    <div class="row post-preview col-md-12 post">
     {% for post in posts %}
     <div class="col-md-4 post">
       <img src="{{ post.image }}" id="imgPost">
@@ -25,9 +25,15 @@
     <div class="anuncios col-md-2">
 
     </div>
+    <hr>
     {% endfor %}
+<<<<<<< HEAD
+
+</div>
+=======
   </div>
   <hr>
+>>>>>>> 4b3935c4c9ae544906cb23732ecdb21a3729cfdb
 
 </div>
 {% endblock %}
