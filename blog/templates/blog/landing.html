@@ -1,41 +1,41 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <body>
-	<div class="tamanho" background="https://drive.google.com/open?id=0B2UzCE63W2uCZkhJeXZFdDN2cjA">
-	<link rel="stylesheet" href="{% static 'css/landing.css' %}">
-	<script src="{% static 'js/bootstrap.min.js' %}"></script>
-	<form class="" method="post" action="/">{% csrf_token %}
-	<div class="container">
+	<div class="tamanho">
+		<link rel="stylesheet" href="{% static 'css/landing.css' %}">
+		<script src="{% static 'js/bootstrap.min.js' %}"></script>
+		<form class="" method="post" action="/">{% csrf_token %}
+		<div class="container">
 
 
-		<div class="col-lg-offset-2 col-lg-2" id="panel" >
-			<h2>Baixe nosso ebook sobre   </h2>
+			<div class="col-lg-offset-2 col-lg-2" id="panel" >
+				<h2>Baixe nosso ebook</h2>
 
-			
+				
 
-				<div class="group">
-					<input id="name" name="nome" type="text" placeholder="Seu nome completo:" class="form-control input-md" required="">
-					<span class="highlight"></span>
-					<span class="bar"></span>
-					<label>Nome</label>
-				</div>
+					<div class="group">
+						<input id="name" name="nome" type="text" placeholder="Seu nome completo:" class="form-control input-md" required="">
+						<span class="highlight"></span>
+						<span class="bar"></span>
+						<label>Nome</label>
+					</div>
 
-				<div class="group">
-					<input id="email" name="email" type="text" placeholder="Seu e-mail:(se possivel, e-mail corporativo)" class="form-control input-md" required="">
-					<span class="highlight"></span>
-					<span class="bar"></span>
-					<label>Email</label>
-				</div>
+					<div class="group">
+						<input id="email" name="email" type="text" placeholder="Seu e-mail:(se possivel, e-mail corporativo)" class="form-control input-md" required="">
+						<span class="highlight"></span>
+						<span class="bar"></span>
+						<label>Email</label>
+					</div>
 
-				<div class="group">
-					<button type="submit" class="buttonbaixar">Baixar E-Book</button>
-				</div>
-			
+					<div class="group">
+						<button type="submit" class="buttonbaixar">Baixar E-Book</button>
+					</div>
+				
 
+			</div>
 		</div>
-	</div>
-	</form>
+		</form>
 	</div>
 </body>
 </html>

@@ -13,9 +13,15 @@ p a {
     text-decoration: underline;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5 {
   font-weight: 800;
   font-family: 'Raleway';
+}
+h6{
+	font-size: 12px;
+	font-weight: 800;
+	font-family: 'Raleway';
+	text-align: left;
 }
 
 #imgLogo, #imgPost{
