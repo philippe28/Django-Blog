@@ -11,7 +11,6 @@ body, html{
   background-size:100%;
   position: fixed;
   overflow: hidden;
-
   background-size: cover; /*Css padrão*/
   -webkit-background-size: cover; /*Css safari e chrome*/
   -moz-background-size: cover; /*Css firefox*/
