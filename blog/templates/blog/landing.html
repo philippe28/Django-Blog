@@ -53,23 +53,35 @@
           <p>Cadastre-se para receber em primeira mão, dicas incríveis sobre RH e Gestão de Pessoas.<p>
           </div>
           <div class="formdeacao">
-		<form id="form-ebook" action="" method="post">
-			<div>
-				<label for="nome">Nome:</label>
-				<input type="text" id="nome" />
-			</div>
-			<div>
-				<label for="email">E-mail:</label>
-				<input type="email" id="email" />
-			</div>
-			<div>
-				<label for="msg">Mensagem:</label>
-				<textarea id="msg"></textarea>
-			</div>
-			
-			<submit id="form-ebook" type="submit">Enviar sua mensagem</submit>
-			<a  style="display:none id="ebook"  target="_blank" type="button" class="btn btn-default buttonbaixar" href="../blog/static/ebooks/ebook1_canaldorh.pdf" download="">Baixe Agora</a>
-			<script>
+		<form class="" method="post" action="">{% csrf_token %}
+              <div class="col-lg-offset-4 col-lg-7 col-md-7 col-sm-7" id="panel" >
+                <h2>CADASTRE-SE E BAIXE NOSSO E-BOOK!</h2>
+                <h4>Nosso primeiro e-book reúne 20 dicas de leituras essenciais para todo gestor.</h4>
+                <div class="group">
+                  <input id="name" name="nome" placeholder="Seu nome:" type="text" class="form-control input-md" required="">
+                  <span class="bar"></span>
+                </div>
+                <div class="group">
+                  <input id="sobrenome" name="sobrenome" placeholder="Seu sobrenome:" type="text" class="form-control input-md" required="">
+                  <span class="bar"></span>
+                </div>
+
+                <div class="group">
+                  <input id="email" name="email" placeholder="E-mail corporativo:" type="email" class="form-control input-md" required="">
+                  <span class="bar"></span>
+                </div>
+                <center>
+                  <div class="group">
+						<button type="submit" class="buttonbaixar">Cadastrar</button>
+                     <a   target="_blank" type="button" class="btn btn-default buttonbaixar" href="https://trello-attachments.s3.amazonaws.com/59d01f57f48170e0828047e5/59d4540f0569ceff864d94f0/5549b93808368b944e425843a39758b8/ebook_canaldorh.pdf" download="">Baixe Agora</a>
+                    
+                    </div>
+				</center>
+                  </div>
+                </div>
+              </div>
+            </form>
+			<!--
 			$( "#form-ebook" ).submit(function( event ) {
 			 var dadosFormulario = $(this).serialize();
 
@@ -89,8 +101,7 @@
 			  
 			  $( "#ebook" ).trigger( "click" );
 			  
-			});</script>
-		</form>
+			});</script>!-->
           </div>
 
         </div>
