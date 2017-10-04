@@ -7,5 +7,5 @@ urlpatterns = [
     url(r'^post/(?P<slug>[\w_-]+)/$', views.post, name='post_detalhe'),
 	url(r'^contato$', views.contato, name='contato'),
 	url(r'^landing$', views.landing, name='landing'),
-	url(r'^ebooks/(?P<filename>)/$', views.pdf_download, 'views.pdf_download'),
+	url(r'^ebooks/(?P<filename>)/$', views.pdf_download, name='views.pdf_download'),
 ]
