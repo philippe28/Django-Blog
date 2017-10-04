@@ -13,7 +13,6 @@ from .forms import ContatoForm
 def post_lista(request):
 
     posts = Publicacao.objects.order_by('-data_publicacao')
-
     form = ContatoForm(request.POST or None)
     if form.is_valid():
         x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
@@ -23,10 +22,9 @@ def post_lista(request):
             ip = request.META.get('REMOTE_ADDR')
 
         post = form.save(commit=False)
-        post.nome = request.POST['nome']
+        post.nome = request.POST['nome'] +" "+request.POST['sobrenome']
         post.email = request.POST['email']
         post.ip = ip
-
         post.save()
 
     return render(request, 'blog/post_lista.html', {'posts': posts})
@@ -50,10 +48,9 @@ def contato(request):
             ip = request.META.get('REMOTE_ADDR')
 
         contato = form.save(commit=False)
-        contato.nome = request.POST['nome']
+        contato.nome = request.POST['nome'] +" "+request.POST['sobrenome']
         contato.email = request.POST['email']
         contato.ip = ip
-
         contato.save()
 
     return render(request, 'blog/contato.html',)
