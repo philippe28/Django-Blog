@@ -1,51 +1,68 @@
 {% extends 'blog/blog_base.html' %} {% block content %}{% load static %}
 <!--Conteudo -->
-		<div style="background:  url({{post.image}}) no-repeat;
-			height: 300px; background-size: cover;"></div>
+
 <div class="container">
 	<div class="row post-preview col-md-12 post">
 		<div class="postimg">
+			<div style="background:  url({{post.image}}) no-repeat;
+			height: 300px; background-size: cover;background-position: 50%;"></div>
 
-		
 		</div>
 		<div class="detalhe">
-			
-			<div class="infodetalhe">
-			<h6>{{post.data_publicacao}}</h6></div>
-			<div class="postextras"> 
-			
-			<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.canaldorh.com{{ post.get_absolute_url }}"><img src="{% static 'img/icon-facebook-share.png' %}"></img></a>
-			<a href="https://plus.google.com/share?url=http%3A%2F%2Fwww.canaldorh.com{{ post.get_absolute_url }}"><img src="{% static 'img/icon-google-share.png' %}"></img></a>
-			<a href="https://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source=http%3A%2F%2Fwww.canaldorh.com{{ post.get_absolute_url }}"><img src="{% static 'img/icon-linkedin-share.png' %}"></img></a>
-			<a href="https://twitter.com/home?status=http%3A%2F%2Fwww.canaldorh.com{{ post.get_absolute_url }}"><img src="{% static 'img/icon-twitter-share.png' %}"></img></a>
+
+			<h6 style="float:left">{{post.data_publicacao}}</h6>
+			<div class="postextras col-md-12 " style="display: flex;justify-content:flex-end">
+
+				<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.canaldorh.com{{ post.get_absolute_url }}"><img src="{% static 'img/icon-facebook-share.png' %}"></img></a>
+				<a href="https://plus.google.com/share?url=http%3A%2F%2Fwww.canaldorh.com{{ post.get_absolute_url }}"><img src="{% static 'img/icon-google-share.png' %}"></img></a>
+				<a href="https://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source=http%3A%2F%2Fwww.canaldorh.com{{ post.get_absolute_url }}"><img src="{% static 'img/icon-linkedin-share.png' %}"></img></a>
+				<a href="https://twitter.com/home?status=http%3A%2F%2Fwww.canaldorh.com{{ post.get_absolute_url }}"><img src="{% static 'img/icon-twitter-share.png' %}"></img></a>
 			</div>
-			
-			
-		
-		<img src="https://trello-attachments.s3.amazonaws.com/59d01f57f48170e0828047e5/59d3fcf9d8c2b019f02e6bac/34dc7eab1001db85a7c37e5b2c96bbb8/SeparadoresHorizontal_gestao_emocao.png" height="150" width="1000">
+
+
+
+			<img src="https://trello-attachments.s3.amazonaws.com/59d01f57f48170e0828047e5/59d3fcf9d8c2b019f02e6bac/34dc7eab1001db85a7c37e5b2c96bbb8/SeparadoresHorizontal_gestao_emocao.png"
+			    height="150" width="1000">
 		</div>
 		<div class="post">
-			<div class="post-title"><h3>{{post.titulo}}</h3></div>
+			<div class="post-title">
+				<h3>{{post.titulo}}</h3>
+			</div>
 
 			<div class="post-desc">
 				{{ post.texto|safe }}
 
 			</div>
-			
+
 		</div>
 		<hr>
 	</div>
 </div>
 
-<script type=“application/ld+json”> 
-{ 
-  “@context” : “http://schema.org”, 
-  “@type” : “Article”, 
-  “name” : “{{post.titulo}}”, 
-  “author” : { “@type” : “Person”, 
-  “name” : “Canal do RH” }, 
-  “image” : “{{post.image}}”, 
-  “articleBody” : “{{ post.resumo }}"}
+<script type=“application/ld+json”>
+	{“
+		@context”: “http: //schema.org”, 
+			“@type”: “Article”,
+		“name”: “{
+			{
+				post.titulo
+			}
+		}”,
+		“author”: {“
+			@type”: “Person”,
+			“name”: “Canal do RH”
+		},
+		“image”: “{
+			{
+				post.image
+			}
+		}”,
+		“articleBody”: “{
+			{
+				post.resumo
+			}
+		}
+		"}
 </script>
 
 {% endblock %}
