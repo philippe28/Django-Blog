@@ -73,7 +73,6 @@ def landing(request):
         contato.nome = request.POST['nome'] +" "+request.POST['sobrenome']
         contato.email = request.POST['email']
         contato.ip = ip
-
         contato.save()
 
     return render(request, 'blog/landing.html',)
