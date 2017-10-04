@@ -21,7 +21,13 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-
+	<script>
+					function OpenAlert(){
+					alert("Obrigado por cadastrar-se!");
+					document.getElementById("botaosecreto").style.display="block";
+        
+    }
+	</script> 
 </head>
 <body id="page-top">
 
@@ -82,7 +88,7 @@
                   </select>
                 </div>
                 <div class="col-md-2 formCad form-group">
-                  <button id="buttonCadastro" name="buttonCadastro" class="btn btn-cad">QUERO RECEBER</button>
+                  <button onclick="OpenAlert()" id="buttonCadastro" name="buttonCadastro" class="btn btn-cad">QUERO RECEBER</button>
                 </div>
               </div>
             </form>
@@ -129,7 +135,7 @@
                 </select>
               </div>
               <div class="form-group">
-                <button id="buttonCadastro" name="buttonCadastro" class="btn btn-foot">QUERO RECEBER</button>
+                <button onclick="OpenAlert()" id="buttonCadastro" name="buttonCadastro" class="btn btn-foot">QUERO RECEBER</button>
 				<!-- Criar um javascript ou iframe para agradecer cadastros (Prioridade 2) !-->
               </div>
             </div>
