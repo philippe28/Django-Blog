@@ -23,7 +23,7 @@ body, html{
 
 
 h2 {
-	margin-top: 10px;
+  margin-top: 10px;
   text-align: center;
   color: #fff;
   font-weight: bold;
@@ -122,68 +122,7 @@ input:focus ~ label, input:valid ~ label {
   -webkit-transition: 0.2s ease all;
 }
 
-.bar:before {
-  left: 50%;
-}
 
-.bar:after {
-  right: 50%;
-}
-
-input:focus ~ .bar:before, input:focus ~ .bar:after {
-  width: 50%;
-}
-
-/* HIGHLIGHTER */
-.highlight {
-  position: absolute;
-  height: 60%;
-  width: 100px;
-  top: 25%;
-  left: 0;
-  pointer-events: none;
-  opacity: 0.5;
-}
-
-input:focus ~ .highlight {
-  -webkit-animation: inputHighlighter 0.3s ease;
-  -moz-animation: inputHighlighter 0.3s ease;
-  animation: inputHighlighter 0.3s ease;
-}
-
-/* Animacao */
-@-webkit-keyframes inputHighlighter {
-  from {
-    background: #fff;
-  }
-
-  to {
-    width: 0;
-    background: transparent;
-  }
-}
-
-@-moz-keyframes inputHighlighter {
-  from {
-    background: #fff;
-  }
-
-  to {
-    width: 0;
-    background: transparent;
-  }
-}
-
-@keyframes inputHighlighter {
-  from {
-    background: #fff;
-  }
-
-  to {
-    width: 0;
-    background: transparent;
-  }
-}
 
 
 #panel {

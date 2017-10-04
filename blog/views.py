@@ -77,6 +77,15 @@ def landing(request):
         contato.save()
 
     return render(request, 'blog/landing.html',)
+	
+def pdf_download(request, filename):
+
+	f = open(filename, "r")
+	response = HttpResponse(FileWrapper(f), content_type='application/pdf')
+	response['Content-Disposition'] = 'attachment; filename=resume.pdf'
+	
+	return response
+
 
 def send_email(request):
     subject = request.POST.get('subject', '')
