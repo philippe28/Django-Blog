@@ -1,8 +1,9 @@
 {% extends 'blog/blog_base.html' %} {% block content %}
 <!--Conteudo -->
 <div class="container">
-    <div class="row post-preview col-md-12 post">
+
     {% for post in posts %}
+    <div class="row post-preview col-md-12 post">
     <div class="col-md-4 post">
       <a href="http://canaldorh.com/post/{{ post.slug }}">
                   <div style = "background:  url({{post.image}}) no-repeat;
@@ -30,8 +31,9 @@
     <div class="anuncios col-md-2">
 
     </div>
+    </div>
     <hr>
     {% endfor %}
 
-</div>
+
 {% endblock %}
