@@ -31,4 +31,16 @@
 		<hr>
 	</div>
 </div>
+
+<script type=“application/ld+json”> 
+{ 
+  “@context” : “http://schema.org”, 
+  “@type” : “Article”, 
+  “name” : “{{post.titulo}}”, 
+  “author” : { “@type” : “Person”, 
+  “name” : “Canal do RH” }, 
+  “image” : “{{post.image}}”, 
+  “articleBody” : “{{ post.resumo }}"}
+</script>
+
 {% endblock %}
