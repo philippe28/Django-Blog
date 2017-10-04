@@ -60,7 +60,7 @@
           <p>Cadastre-se para receber em primeira mão, dicas incríveis sobre RH e Gestão de Pessoas.<p>
           </div>
           <div class="formdeacao">
-		<form class="" method="post" action="">{% csrf_token %}
+		<form class="" method="post" action="" onSubmit="OpenAlert()">{% csrf_token %}
               <div class="col-lg-offset-4 col-lg-7 col-md-7 col-sm-7" id="panel" >
                 <h2>CADASTRE-SE E BAIXE NOSSO E-BOOK!</h2>
                 <h4>Nosso primeiro e-book reúne 20 dicas de leituras essenciais para todo gestor.</h4>
@@ -79,7 +79,7 @@
                 </div>
                 <center>
                   <div class="group">
-						<button onClick="OpenAlert()" type="submit" id="btncadastrar" class="buttonbaixar">Cadastrar</button>
+						<button type="submit" id="btncadastrar" class="buttonbaixar">Cadastrar</button>
                      <div id="botaosecreto" class="collapse"> <a style="display:none" target="_blank" type="button" class="btn btn-default buttonbaixar" href="https://trello-attachments.s3.amazonaws.com/59d01f57f48170e0828047e5/59d4540f0569ceff864d94f0/5549b93808368b944e425843a39758b8/ebook_canaldorh.pdf" download="">Baixe Agora</a> </div>
                     
                     </div>

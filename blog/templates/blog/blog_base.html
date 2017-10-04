@@ -63,7 +63,7 @@
             <h2>Saiba como <b>gerir pessoas</b> e <b>alcançar resultados.</b></h1>
               <span class="subheading">Cadastre-se para receber conteúdo de qualidade sobre RH.</span>
             </div>
-            <form method="post" action="">{% csrf_token %}
+            <form method="post" action="" onSubmit="OpenAlert()">{% csrf_token %}
               <div class="row col-md-12 control-label form">
 
                 <div class="col-md-2 formCad form-group">
@@ -83,7 +83,7 @@
                   </select>
                 </div>
                 <div class="col-md-2 formCad form-group">
-                  <button onSubmit="OpenAlert()" id="buttonCadastro" name="buttonCadastro" class="btn btn-cad">QUERO RECEBER</button>
+                  <button id="buttonCadastro" name="buttonCadastro" class="btn btn-cad">QUERO RECEBER</button>
                 </div>
               </div>
             </form>
@@ -108,7 +108,7 @@
           <h2>Gostou? Cadastre-se para receber mais conteúdos de qualidade.</b></h1>
             <span class="subheading">Fique tranquilo! Não vamos encher sua caixa de entrada de spam.</span>
         </div>
-         <form method="post" action="">
+         <form method="post" action="" onSubmit="OpenAlert()">
             {% csrf_token %}
             <div class="row col-md-12 control-label formFoot">
 
@@ -130,7 +130,7 @@
                 </select>
               </div>
               <div class="form-group">
-                <button onSubmit="OpenAlert()" id="buttonCadastro" name="buttonCadastro" class="btn btn-foot">QUERO RECEBER</button>
+                <button id="buttonCadastro" name="buttonCadastro" class="btn btn-foot">QUERO RECEBER</button>
 				<!-- Criar um javascript ou iframe para agradecer cadastros (Prioridade 2) !-->
               </div>
             </div>
