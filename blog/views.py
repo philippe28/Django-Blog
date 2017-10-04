@@ -57,7 +57,7 @@ def contato(request):
         contato.save()
 
     return render(request, 'blog/contato.html',)
-	
+
 
 def landing(request):
 
@@ -70,7 +70,7 @@ def landing(request):
             ip = request.META.get('REMOTE_ADDR')
 
         contato = form.save(commit=False)
-        contato.nome = request.POST['nome']
+        contato.nome = request.POST['nome'] +" "+request.POST['sobrenome']
         contato.email = request.POST['email']
         contato.ip = ip
 
