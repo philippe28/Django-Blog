@@ -21,6 +21,7 @@ class Publicacao(models.Model):
     )"""
 
     image = models.CharField(max_length=255, blank=True, null=True)
+    image_detalhe = models.CharField(max_length=255, blank=True, null=True)
 
     def publicacao(self):
         self.data_publicacao = timezone.now()
