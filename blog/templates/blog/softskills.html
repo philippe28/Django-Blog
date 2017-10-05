@@ -16,8 +16,6 @@
   <link rel="stylesheet" href="{% static 'css/landing.css' %}">
   <link href='https://fonts.google.com/specimen/Raleway' rel='stylesheet' type='text/css'>
   <link href="{% static 'css/jquery-confirm.css' %}" rel="stylesheet">
-  <script src="{% static 'js/jquery.js' %}"></script>
-  <script src="{% static 'js/jquery-confirm.js' %}"></script>
 
 
 </head>
@@ -25,7 +23,6 @@
 <body id="page-top">
 
   <!-- Menu principal -->
-  <script src="{% static 'js/bootstrap.min.js' %}"></script>
   <div class="land">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
@@ -64,7 +61,7 @@
             {% csrf_token %}
             <div class="col-lg-offset-4 col-lg-7 col-md-7 col-sm-7" id="panel">
               <h2>CADASTRE-SE E BAIXE NOSSO E-BOOK!</h2>
-              <h4>Nosso primeiro e-book reúne 20 dicas de leituras essenciais para todo gestor.</h4>
+              <h4>Nosso segundo e-book fala sobre a importância das <b>soft skills</b> durante um recrutamento.</h4>
               <div class="group">
                 <input id="name" name="nome" placeholder="Seu nome:" type="text" class="form-control input-md" required="">
                 <span class="bar"></span>
@@ -102,6 +99,9 @@
 </body>
 
 </html>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/jquery.js' %}"></script>
+	<script src="{% static 'js/jquery-confirm.js' %}"></script>
 <script>
   $(".form-contato").submit(function (event) {
     event.preventDefault();
