@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.utils import timezone
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
-
+from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 
 from .models import Publicacao, Contato
