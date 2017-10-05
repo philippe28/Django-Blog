@@ -74,14 +74,24 @@ def landing(request):
 
     return render(request, 'blog/landing.html',)
 	
-def pdf_download(request, filename):
+def softskills(request):
 
-	f = open(filename, "r")
-	response = HttpResponse(FileWrapper(f), content_type='application/pdf')
-	response['Content-Disposition'] = 'attachment; filename=resume.pdf'
+    form = ContatoForm(request.POST or None)
+    if form.is_valid():
+        x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+        if x_forwarded_for:
+            ip = x_forwarded_for.split(',')[0]
+        else:
+            ip = request.META.get('REMOTE_ADDR')
+
+        contato = form.save(commit=False)
+        contato.nome = request.POST['nome'] +" "+request.POST['sobrenome']
+        contato.email = request.POST['email']
+        contato.ip = ip
+        contato.save()
+
+    return render(request, 'blog/softskills.html',)
 	
-	return response
-
 
 def send_email(request):
     subject = request.POST.get('subject', '')
