@@ -2,13 +2,13 @@
 <!--Conteudo -->
 <div class="container">
 
-    {% for post in posts %}
-    <div class="row post-preview col-md-12 post">
-    <div class="col-md-4 post">
+  {% for post in posts %}
+  <div class="row post-preview col-md-12 post">
+    <div class="col-md-4 col-sm-6 post">
       <a href="http://canaldorh.com/post/{{ post.slug }}">
-                  <div style = "background:  url({{post.image}}) no-repeat;
-        height: 300px; background-size: cover;" ></div>
-        </a>
+        <div style="background:  url({{post.image}}) no-repeat;
+        height: 300px; background-size: cover;"></div>
+      </a>
     </div>
     <div class="col-md-6">
 
@@ -31,9 +31,5 @@
     <div class="anuncios col-md-2">
 
     </div>
-    </div>
-    <hr>
-    {% endfor %}
-
-
-{% endblock %}
+  </div>
+  <hr> {% endfor %} {% endblock %}
