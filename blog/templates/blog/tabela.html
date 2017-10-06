@@ -3,8 +3,8 @@
     <!-- Table Wrapper Begin -->
 
     email,nome,ip,tipo,data_hora
-    <br> {% for campo in tabela %} {{campo.email}},{{campo.nome}},{{campo.ip}},{{campo.tipo}},{{campo.data_hora |date:"Y-m-d
-    H:m:s"}}
+    <br> {% for campo in tabela %} {{campo.email}}, {{campo.nome}},{{campo.ip}},{% if campo.tipo != None%}{{campo.tipo}}
+    {% endif%},{{campo.data_hora |date:"Y-m-d H:m:s"}}
 
     <br> {% endfor %}
 </table>
