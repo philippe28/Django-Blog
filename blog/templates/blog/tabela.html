@@ -1,0 +1,37 @@
+<table class="data-table" id="data-table">
+
+    <!-- Table Wrapper Begin -->
+
+    email,nome,ip,tipo,data_hora
+    <br> {% for campo in tabela %} {{campo.email}},{{campo.nome}},{{campo.ip}},{{campo.tipo}},{{campo.data_hora |date:"Y-m-d
+    H:m:s"}}
+
+    <br> {% endfor %}
+</table>
+
+<!-- <button onclick="relatorio()" class="btn btn-primary pull-right"> 
+Gerar Tabela
+</button>-->
+
+<script type="text/javascript">
+    function relatorio() {
+        var dt = new Date();
+        var dia = dt.getDate();
+        var mes = dt.getMonth() + 1;
+        var ano = dt.getFullYear();
+        var hora = dt.getHours();
+        var minuto = dt.getMinutes();
+        var postfix = dia + "." + mes + "." + ano + "_" + hora + "." + minuto;
+        var a = document.createElement('a');
+        var data_type = 'data:application/csv;charset=utf-8';
+
+        var table_div = document.getElementById('data-table');
+        var table_html = table_div.outerHTML.replace(/ /g, '%20');
+        a.href = data_type + ', ' + table_html;
+        a.download = 'relatorio_' + postfix + '.xls';
+        a.click();
+
+        e.preventDefault();
+
+    }
+</script>

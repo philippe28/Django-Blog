@@ -1,3 +1,4 @@
+import datetime
 from django.shortcuts import render
 from django.utils import timezone
 from django.core.mail import send_mail, BadHeaderError
@@ -54,6 +55,13 @@ def contato(request):
         contato.save()
 
     return render(request, 'blog/contato.html',)
+
+def tabela(request):
+    tabela = Contato.objects.order_by('nome')
+
+    return render(request, 'blog/tabela.html',{'tabela': tabela})
+
+
 
 
 def landing(request):
