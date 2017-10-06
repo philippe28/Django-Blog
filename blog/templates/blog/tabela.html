@@ -3,7 +3,7 @@
     <!-- Table Wrapper Begin -->
 
     email,nome,ip,tipo,data_hora
-    <br> {% for campo in tabela %}{{campo.email}},{{campo.nome}},{{campo.ip}},B2{% if "gmail" in campo.email or "hotmail" in campo.email or "yahoo" in campo.email or "uol.com.br" in campo.email or "outlook.com" in campo.email or "live.com" in campo.email %}C{% else %}B{% endif %},{{campo.data_hora |date:"Y-m-d H:m:s"}}
+    <br> {% for campo in tabela %}{{campo.email}},{{campo.nome}},{{campo.ip}},B2{% if "gmail" in campo.email or "globo.com" in campo.email or "hotmail" in campo.email or "yahoo" in campo.email or "bol.com" in campo.email or "uol.com.br" in campo.email or "outlook.com" in campo.email or "terra.com" in campo.email or "live.com" in campo.email %}C{% else %}B{% endif %},{{campo.data_hora |date:"Y-m-d H:m:s"}}
 	<br>{% endfor %}
 </table>
 <!--{% if campo.tipo != None%}{{campo.tipo}}{% endif%}!-->
