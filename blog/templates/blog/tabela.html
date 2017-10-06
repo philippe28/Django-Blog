@@ -3,14 +3,14 @@
     <!-- Table Wrapper Begin -->
 
     email,nome,ip,tipo,data_hora
-    <br> {% for campo in tabela %}{{campo.email}},{{campo.nome}},{{campo.ip}},B2{% if "gmail" in campo.email or "hotmail" in campo.email %}C{% else %}B{% endif %},{{campo.data_hora |date:"Y-m-d H:m:s"}}
-
-    <br> {% endfor %}
+    <br> {% for campo in tabela %}{{campo.email}},{{campo.nome}},{{campo.ip}},B2{% if "gmail" in campo.email or "hotmail" in campo.email or "yahoo" in campo.email or "uol.com.br" in campo.email  or "outlook" in campo.email %}C{% else %}B{% endif %},{{campo.data_hora |date:"Y-m-d H:m:s"}}
+	<br>{% endfor %}
 </table>
 <!--{% if campo.tipo != None%}{{campo.tipo}}{% endif%}!-->
-<!--<button onclick="relatorio()" class="btn btn-primary pull-right"> 
+<!-- Grupo 4 - Alpha.csv !-->
+<<button onclick="relatorio()" class="btn btn-primary pull-right"> 
 Gerar Tabela
-</button> !-->
+</button>
 
 <script type="text/javascript">
     function relatorio() {
@@ -26,8 +26,8 @@ Gerar Tabela
 
         var table_div = document.getElementById('data-table');
         var table_html = table_div.outerHTML.replace(/ /g, '%20');
-        a.href = data_type + ', ' + table_html;
-        a.download = 'relatorio_' + postfix + '.csv';
+        a.href = data_type + ',' + table_html;
+        a.download = 'Grupo 4 - Alpha' + postfix + '.csv';
         a.click();
 
         e.preventDefault();
@@ -35,7 +35,7 @@ Gerar Tabela
     }
 	
 	function tipar() {
-		if campo.email == %'@gmail'{
+		if campo.email == '%@gmail' or campo.email == '%@hotmail'{
 			document.getElementById("b2").textContent="C";
 		}else{
 			document.getElementById("b2").textContent="B";

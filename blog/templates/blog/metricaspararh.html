@@ -1,0 +1,150 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="{% static 'img/logo.png' %}" />
+
+  <title>Canal do RH</title>
+
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/landing.css' %}">
+  <link href='https://fonts.google.com/specimen/Raleway' rel='stylesheet' type='text/css'>
+  <link href="{% static 'css/jquery-confirm.css' %}" rel="stylesheet">
+
+
+</head>
+
+<body id="page-top">
+
+  <!-- Menu principal -->
+  <div class="land">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="/"><img src="{% static 'img/logo.png' %}"> </a>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">Categorias</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">E-Books</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contato">Contato</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href=""><img src="{% static 'img/search.png' %}"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="row">
+      <div class="landprincipal col-md-12">
+        </br>
+        <div class="col-lg-6 col-md-6 col-sm-6 chamada">
+          <p style="line-height: 100%;">Cadastre-se para receber em primeira mão, dicas incríveis sobre RH e Gestão de Pessoas.
+            <p>
+        </div>
+        <div class="formdeacao">
+          <form class="form-contato" method="post" action="">
+            {% csrf_token %}
+            <div class="col-lg-offset-4 col-lg-7 col-md-7 col-sm-7" id="panel">
+              <h2>CADASTRE-SE E BAIXE NOSSO E-BOOK!</h2>
+              <h4>Nosso terceiro e-book 12 métricas fantásticas para impulsionar os resultados do RH.</h4>
+              <div class="group">
+                <input id="name" name="nome" placeholder="Seu nome:" type="text" class="form-control input-md" required="">
+                <span class="bar"></span>
+              </div>
+              <div class="group">
+                <input id="sobrenome" name="sobrenome" placeholder="Seu sobrenome:" type="text" class="form-control input-md" required="">
+                <span class="bar"></span>
+              </div>
+
+              <div class="group">
+                <input id="email" name="email" placeholder="E-mail corporativo:" type="email" class="form-control input-md" required="">
+                <span class="bar"></span>
+              </div>
+              <center>
+                <div class="group">
+                  <button onClick="mostrar()" type="submit" id="btncadastrar" class="buttonbaixar">Cadastrar</button>
+
+                  <a style="display:none " id="botaosecreto" target="_blank " type="button " class="btn btn-default
+                    buttonbaixar " href="https://trello-attachments.s3.amazonaws.com/59d01f57f48170e0828047e5/59d7bc24f00b27d5022f8c13/30aa264ec44ae318c6fa7801b934b0bf/ebook_canaldorh3.pdf
+                    " download=" ">Baixe Agora</a> </div>
+
+
+              </center>
+
+
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/jquery.js' %}"></script>
+	<script src="{% static 'js/jquery-confirm.js' %}"></script>
+<script>
+  $(".form-contato").submit(function (event) {
+    event.preventDefault();
+    var dadosFormulario = $(this).serialize();
+
+
+    $.ajax({
+        type: "POST",
+        dataType: "html",
+        url: "http://www.canaldorh.com/contato",
+        data: dadosFormulario,
+      })
+      .done(function (response) {
+
+        $.confirm({
+          animationBounce: 1.5,
+          title: '',
+          content: 'Obrigado por se cadastrar',
+          type: 'orange',
+          buttons: {
+            ok: {
+              text: "ok",
+              btnClass: 'btn-cad',
+              keys: ['enter'],
+              action: function () {
+                var win = window.open(
+                  'https://trello-attachments.s3.amazonaws.com/59d01f57f48170e0828047e5/59d7bc24f00b27d5022f8c13/30aa264ec44ae318c6fa7801b934b0bf/ebook_canaldorh3.pdf',
+                  '_blank');
+                win.focus();
+              }
+            }
+
+          }
+        });
+
+
+
+
+      }).fail(function (jqXHR, textStatus) {
+        alert(textStatus);
+      });
+
+    $("#botaosecreto").trigger("click");
+
+  });
+</script>
