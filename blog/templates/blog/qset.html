@@ -1,16 +1,19 @@
 <table class="data-table" id="data-table">
 
+{% if Poll.objects.get( Q(email__startswith='gmail') , Q((email__startswith='hotmail'))  %}'B2C'{% endif%}"B2B"
+ <p>---- Teste abaixo ----</p>
     <!-- Table Wrapper Begin -->
 
     email,nome,ip,tipo,data_hora
-    <br> {% for campo in tabela %}{{campo.email}},{{campo.nome}},{{campo.ip}},B2{% if "gmail" in campo.email or "hotmail" in campo.email %}C{% else %}B{% endif %},{{campo.data_hora |date:"Y-m-d H:m:s"}}
+    <br> {% for campo in qset %} {{campo.email}}, {{campo.nome}},{{campo.ip}},
+	Teste,{{campo.data_hora |date:"Y-m-d H:m:s"}}
 
     <br> {% endfor %}
 </table>
-<!--{% if campo.tipo != None%}{{campo.tipo}}{% endif%}!-->
-<!--<button onclick="relatorio()" class="btn btn-primary pull-right"> 
+
+<!-- <button onclick="relatorio()" class="btn btn-primary pull-right"> 
 Gerar Tabela
-</button> !-->
+</button>
 
 <script type="text/javascript">
     function relatorio() {
@@ -33,12 +36,4 @@ Gerar Tabela
         e.preventDefault();
 
     }
-	
-	function tipar() {
-		if campo.email == %'@gmail'{
-			document.getElementById("b2").textContent="C";
-		}else{
-			document.getElementById("b2").textContent="B";
-		}
-	}
-</script>
+</script>-->
